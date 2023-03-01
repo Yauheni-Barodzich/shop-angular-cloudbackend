@@ -24,6 +24,7 @@ functions:
 
 plugins:
   - serverless-webpack
+  - serverless-auto-swagger
 
 custom:
   webpack:

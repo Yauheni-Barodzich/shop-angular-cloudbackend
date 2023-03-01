@@ -1,12 +1,9 @@
-import fetch from 'node-fetch';
-import {PRODUCTS_API_PATH} from '../constants'
+import products from "../dataBase/products";
 
 export const getProductsById = async ({pathParameters}) => {
   const {productId} = pathParameters;
 
   try {
-    const response = await fetch(PRODUCTS_API_PATH);
-    const products = await response.json();
     const matchedProducts = products.filter(product => product.id === +productId);
     const isFindProduct = !!matchedProducts.length;
 
